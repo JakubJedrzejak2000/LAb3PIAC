@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>My Home Page!</title>
+    <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+</head>
+<body>
+
+{% include "include/menu.html" %}
+{% block body %}
+{% endblock %}
+
+
+<div class="col-md-5 p-lg-5 mx-auto my-5" style="text-align: center">
+      <h1 class="display-4 fw-normal">Witam na mojej stronie głównej!</h1>
+      <p class="lead fw-normal">Strona ma charakter portfolio</p>
+      <a class="btn btn-outline-secondary" href="{{ url_for('gallery') }}">Przykład moich prac!</a>
+    </div>
+
+</body>
+</html>
